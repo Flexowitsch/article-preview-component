@@ -1,0 +1,246 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    --darkblue: rgba(72, 85, 106, 1);
+    --lightblue: rgba(110, 128, 152, 1);
+    --white: rgba(255, 255, 255, 1);
+    --bg-body: rgba(110, 128, 152, 1);
+
+}
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    background-color: #ECF2F8;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card {
+    background-color: var(--white);
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.625rem;
+    box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.50);
+}
+
+@media(max-width: 1440px) {
+    .card {
+        flex-direction: column;
+    }
+}
+
+.img-container {
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 0.625rem;;
+    border-bottom-left-radius: 0.625rem;;
+}
+
+@media(max-width: 1440px) {
+    .img-container {
+        aspect-ratio: 16/9;
+        border-top-left-radius: 0.625rem;
+        border-top-right-radius: 0.625rem;
+        border-bottom-left-radius: 0rem;
+        border-bottom-left-radius: 0rem;
+    }
+}
+
+h1 {
+    color: #48556A;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.75rem;
+    /* 140% */
+    letter-spacing: 0.01563rem;
+}
+
+@media(max-width: 1440px) {
+    h1 {
+        font-size: 1rem;
+    }
+}
+
+p {
+    color: #6E8098;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem;
+    /* 153.846% */
+    letter-spacing: 0.00763rem;
+    margin-bottom: 1.25rem;
+}
+
+@media(max-width: 1440px) {
+    p {
+        font-size: 0.8125rem;
+    }
+}
+
+p.name {
+    color: #48556A;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25rem;
+    /* 153.846% */
+    letter-spacing: 0.00763rem;
+    margin: 0;
+}
+
+@media(max-width: 1440px) {
+    p.name {
+        font-size: 0.8125rem;
+    }
+}
+
+p.date {
+    color: #9DAEC2;
+
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem;
+    /* 153.846% */
+    letter-spacing: 0.00763rem;
+    margin: 0;
+}
+
+@media(max-width: 1440px) {
+    p.date {
+        font-size: 0.8125rem;
+    }
+}
+
+/*Layout*/
+
+.text-container {
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author {
+    display: flex;
+}
+
+.author-image {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border-radius: 2.5rem;
+    background: url('./images/avatar-michelle.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 1rem;
+}
+
+#share-btn {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    background: rgba(236, 242, 248, 1);
+    position: relative;
+    border-radius: 100%;
+}
+
+#share-btn:hover {
+    background: #E2E5E9;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#share-btn img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* //////// SHARING MODAL ////////*/
+
+.sharing-modal {
+    background: #48556A;
+    max-width: 248px;
+    border-radius: 0.625rem;
+    padding: 1.5rem 2.3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.3rem;
+    position: absolute;
+    right: -64px;
+    bottom: 98px;
+    box-shadow: 0px 10px 10px 0px rgba(201, 213, 225, 0.50);
+}
+
+@media(max-width: 1440px) {
+    .sharing-modal {
+        max-width: none;
+        box-shadow: none;
+        transform: translate(-50%, -50%);
+        position: none;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0px 10px 10px 0px rgba(201, 213, 225, 0.50);
+    }
+}
+
+.sharing-modal p {
+    margin: 0;
+    text-transform: uppercase;
+    color: #9DAEC2;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem; /* 153.846% */
+    letter-spacing: 0.3125rem;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.corner {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #48556A;
+    transform: rotate(-45deg) translate(-50%, -50%);
+    top: 82%;
+    left: 54%;
+    position: absolute;
+}
+
+@media(max-width: 1440px) {
+    .corner {
+        display: none;
+    }
+}
